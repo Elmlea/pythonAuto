@@ -2,7 +2,7 @@ type = "" # initialise the variable because it gets checked shortly
 
 print("That's the variable initialised.") # so I know the program has started!
 
-while ("for" or "while") not in type:
+while ("for" not in type) and ("while" not in type):
     type = input("Would you like to print your numbers using a FOR loop, or a WHILE loop? :>  ")
 
     if "for" in type:

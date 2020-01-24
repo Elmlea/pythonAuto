@@ -6,7 +6,7 @@ def collatz(number):
         number = (number * 3) + 1
         return number
 
-while True:
+while True: # sets up an infinite loop until a valid value is given
     try:
         value = int(input("What number would you like to start with? :> "))
         print(value)

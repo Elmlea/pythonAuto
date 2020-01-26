@@ -13,10 +13,10 @@
 
 import pprint
 
-def addToInventory(inventory, addedItems):
-    for item in addedItems:
-        inventory.setdefault(item, 0)
-        inventory[item] += 1
+def addToInventory(inventory, addedItems): # required inputs are the inventory used, and the list of items to add
+    for item in addedItems: # sets up a loop to iterate through each item in the list of loot
+        inventory.setdefault(item, 0) # sets the default as 0 if the player has none
+        inventory[item] += 1 
 
 def displayInventory(inventory):
     print("\nYou are carrying:\n")

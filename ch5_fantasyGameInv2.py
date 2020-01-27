@@ -14,9 +14,11 @@
 import pprint
 
 def addToInventory(inventory, addedItems): # required inputs are the inventory used, and the list of items to add
+    print("\nYou were carrying a total of " + str(sum(inventory.values())) + " items.\n")
     for item in addedItems: # sets up a loop to iterate through each item in the list of loot
         inventory.setdefault(item, 0) # sets the default as 0 if the player has none
-        inventory[item] += 1 
+        inventory[item] += 1
+    print("After collecting the loot, you have " + str(sum(inventory.values())) + " items.")
 
 def displayInventory(inventory):
     print("\nYou are carrying:\n")
@@ -34,6 +36,9 @@ dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby', 'fish']
 
 print("\nBefore the encounter:")
 displayInventory(playerInventory)
+
+print("\n The defeated dragon left behind loot!  You see the following: ")
+print(dragonLoot)
 
 addToInventory(playerInventory, dragonLoot)
 

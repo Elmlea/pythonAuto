@@ -1,9 +1,10 @@
 #! python3
- # Take a list of lists, and print them out nicely!
+# Take a list of lists, and print them out nicely!
 
 myTable = [['apples', 'oranges', 'cherries', 'banana'],
              ['Alice', 'Bob', 'Carol', 'David'],
-             ['dogs', 'cats', 'moose', 'goose']]
+             ['dogs', 'cats', 'moose', 'goose'],
+             ['please', 'help', 'me', 'Reddit!']]
 
 def tablePrinter(tableData):
 
@@ -37,8 +38,14 @@ def tablePrinter(tableData):
     ## NOTE: iterated through on the nested for statement below.
     for y in range(len(tableData[0])): # y is the length of the first nested list
         for x in range(len(tableData)): # x is the number of lists
+
+            ## NOTE: This prints the term, right justified by the appropriate
+            ## NOTE: amount, then adds a space instead of a newline.
             print(tableData[x][y].rjust(colWidths[x]), end = ' ')
+
+        ## NOTE: This prints a newline after iterating through all the first entries.
         print()
+
     ## BUG: This assumes all the nested lists are the same length.
     ## BUG: Can I change for y in range(len(tableData[0])) to be a variable??
 

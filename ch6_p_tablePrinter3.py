@@ -4,7 +4,8 @@
 myTable = [['apples', 'oranges', 'cherries', 'banana'],
              ['Alice', 'Bob', 'Carol', 'David'],
              ['dogs', 'cats', 'moose', 'goose'],
-             ['please', 'help', 'me', 'Reddit!']]
+             ['please', 'help', 'me', 'Reddit!'],
+             ['how', 'about', 'another', 'list']]
 tableData = myTable # until it's changed to a function
 
 colWidths = [0] * len(tableData)
@@ -15,7 +16,7 @@ for innerList in tableData:
     print("This equates to colWidths index " + str(colWidthsIndex))
 
     for element in innerList:
-        print("Working on " + element)
+        print("Working on '" + element + "'")
         print("Checking the length of '" + element +"'")
         print("'" + element + "' is " + str(len(element)) + " characters long.\n")
 

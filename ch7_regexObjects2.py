@@ -12,8 +12,8 @@ print(r"(\d\d\d)-(\d\d\d-\d\d\d\d)")
 print("The first group will be group 1, and so on.")
 print("\nPassing 0 to the group method, or nothing, will return all matched text.")
 
-print(r"phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)'")
-print("mo = phoneNumRegex.search('My number is 123-456-2342')")
+print(r">>> phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)'")
+print(">>> mo = phoneNumRegex.search('My number is 123-456-2342')")
 
 phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
 mo = phoneNumRegex.search("My number is 123-456-2342")
@@ -36,11 +36,11 @@ print(mo.group(1))
 print(mo.group(2))
 
 print("\nFinally, calling the groups (note plural!) method pulls them out as a tuple.")
-print("We call mo.groups()")
+print("We call mo.groups(), and print it below:")
 print(mo.groups())
 print("\nNow, we can use this for multiple assignment.")
 print("For example:")
-print("areaCode, mainNumber = mo.groups()")
+print(">>> areaCode, mainNumber = mo.groups()")
 
 areaCode, mainNumber = mo.groups()
 

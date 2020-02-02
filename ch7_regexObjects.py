@@ -1,25 +1,29 @@
 import re
 
-# NOTE: Passing a string value representing your regular expression
-# to re.compile() returns a regex object
+print("""Passing a string value representing your regular expression
+to re.compile() returns a regex object.  This is like making a template.""")
 
 # NOTE: We want the phone number pattern from the previous exercise.
 # \d represents a digit character.
 # \d\d\d-\d\d\d-\d\d\d\d is the format for 123-456-1234.
 
+print("\n>>> phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d)")
 phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
-# NOTE: this creats a Regex object.  r makes this a raw string, so
-# escape characters \ are ignored.
+print("""
+This creates a Regex object.  r makes this a raw string, so
+escape characters \ are ignored.  Remember, we've made a template
+matching that orientation of digits, and called it phoneNumRegex
+""")
 
 message = "Hello, my number is 415-555-9999"
 
 print("We store a message: ''" + message + "'")
-print("Now we run the search method on our regex object.")
-print("By running mo = phoneNumRegex.search(message)")
+print("\nNow we run the search method on our regex object.")
+print("By running >>> mo = phoneNumRegex.search(message)")
 
 mo = phoneNumRegex.search(message)
 
-print("The result is stored in mo, and we call the group method to display.")
+print("\nThe result is stored in mo, and we call the group method to display.")
 print("Syntax is mo.group()")
 print("Phone number found: " + mo.group())
 

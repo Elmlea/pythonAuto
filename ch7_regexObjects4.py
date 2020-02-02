@@ -16,14 +16,23 @@ print("an argument; eg:")
 print(">>> mo = batRegex.search(r'I like the Batmobile best')")
 print("mo.group() should return 'Batmobile'")
 print()
-mo = batRegex.search(r'I like the Batmobile best.')
+mo = batRegex.search(r'I like the Batmobile best but also the Batcopter.')
 print(mo.group())
+
 
 print("\nAsking for group(1) will return 'mobile' as the first group")
 print("because it's the first element from the options in parenthesis")
 print(">>> print(mo.group(1))")
 
 print(mo.group(1))
+
+print("""What if we print groups plural?  It won't return a tuple;
+because using | works like an 'or' statement, so it's only matching
+mobile/copter etc
+""")
+print(">>> print(mo.groups())")
+
+print(mo.groups())
 
 print("""So the method group() returns the entire matching string;
 which is 'Bat' followed by any of the options in parenthesis.

@@ -1,6 +1,4 @@
-print("More pattern matching.")
-print("Grouping")
-print("--------\n")
+print("Regex Objects 2 - Grouping\n")
 
 print("We import the re module first, using 'import re'\n")
 

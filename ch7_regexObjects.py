@@ -1,5 +1,6 @@
 import re
 
+print("Regex Objects 1 - Setup & Search\n")
 print("""Passing a string value representing your regular expression
 to re.compile() returns a regex object.  This is like making a template.""")
 
@@ -27,11 +28,11 @@ print("\nThe result is stored in mo, and we call the group method to display.")
 print("Syntax is mo.group()")
 print("Phone number found: " + mo.group())
 
-"""Review of Regular Expression Matching
+print("""Review of Regular Expression Matching
 While there are several steps to using regular expressions in Python,
 each step is fairly simple.
 
 1. Import the regex module with import re.
 2. Create a Regex object with the re.compile() function. (Remember to use a raw string.)
 3. Pass the string you want to search into the Regex object’s search() method. This returns a Match object.
-4. Call the Match object’s group() method to return a string of the actual matched text."""
+4. Call the Match object’s group() method to return a string of the actual matched text.""")

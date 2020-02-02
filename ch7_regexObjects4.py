@@ -1,6 +1,6 @@
 import re
 
-print("Another use of | is to match multiple patterns.\n")
+print("Regex Objects 4 - Multiple Patterns in a Group\n")
 
 print("""If you want to match Batman, Batmobile, Batcopter, Batboat,
 you could use the regular expression:

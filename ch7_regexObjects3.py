@@ -8,7 +8,7 @@
 # When both Batman and Tina Fey occur in the searched string,
 # the first occurrence of matching text will be returned as
 # the Match object.
-
+print("Regex Objects 3 - Matching Multiple Patterns\n")
 print("The | character allows us to effectively place an 'or' term in a regex.")
 print("heroRegex = re.compile(r'Batman|Tina Fey')")
 

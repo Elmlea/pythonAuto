@@ -41,6 +41,9 @@ print("""
 You can define ranges too; [a-zA-Z0-9] is all upper and lower case letters,
 plus all numbers.
 
+Lastly, you can put a ^ inside the openeing square bracket to define a negative
+class; which includes all the characters NOT in the brackets.
+
 Important point; there's no need to use escape characters within the square
 brackets.
 """)

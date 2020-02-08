@@ -11,14 +11,14 @@ import pyperclip, re
 
 # NOTE: Setup phone number regex
 
-phoneRegex = re.compile(r"""(
+phoneRegex = re.compile(r"""
 (\d{3}|\(\d{3}\))?             # area code
 (\s|-|\.)?                     # separator
 (\d{3})                        # first 3 digits
 (\s|-|\.)                      # separator
 (\d{4})                        # last 4 digits
 (\s*(ext|x|ext.)\s*(\d{2,5}))? # extension
-)""", re.VERBOSE)
+""", re.VERBOSE)
 
 # NOTE: Setup email regex
 
@@ -41,6 +41,7 @@ matches = [] # sets up an empty list
 print("\nBeginning phone number search...")
 for groups in phoneRegex.findall(text):
     print("Found " + str(groups[0]))
+    print("The raw data found is " + str(groups))
     print("\nSplitting into component groups:")
     for index in range(1,8):
         print("Part "+ str(index) + ": " + str(groups[index]))

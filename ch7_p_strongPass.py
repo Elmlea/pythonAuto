@@ -3,8 +3,6 @@
 # Strong Password Checker
 # ATBSWP Ch 7 Project - 8 Feb 20
 
-# NOTE: Generate multiple regexes, compare to each in turn?
-
 import re
 
 userPass = input("Please enter the password to check :> ")

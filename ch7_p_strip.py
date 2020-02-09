@@ -9,7 +9,7 @@
 
 # Strip whitespace with ^\s* and \s*$
 
-import re
+import re, pyperclip
 
 def stripWhite(string):
     stripWhiteLeft = re.compile(r'^\s*')
@@ -22,14 +22,22 @@ def stripSpecific(string, chars):
 
     return stripRegex.sub('', string)
 
-inputString = input("Please input the string to strip :> ")
+inputString = input("Please input the string to strip.  Press enter to copy from the clipboard :> ")
 stripChars = input("Please input the characters to remove.  Press enter to strip white space :> ")
+
+if inputString == "":
+    inputString = pyperclip.paste()
 
 print("The string input is \n\n" + "-" + inputString + "-" + "\n")
 
 if stripChars == "":
     print("White space will be stripped from the beginning and end.\n")
+    print("It will be copied to the clipboard. Output is: ")
     print(stripWhite(inputString))
+    pyperclip.copy(stripWhite(inputString))
+
 else:
     print("The characters to be removed are: " + stripChars + '\n')
+    print("It will be copied to the clipboard. Output is: ")
     print(stripSpecific(inputString, stripChars))
+    pyperclip.copy(stripSpecific(inputString, stripChars))
